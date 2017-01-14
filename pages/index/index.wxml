@@ -1,14 +1,14 @@
 
 <!--index.wxml-->
 <view class="container">
-  <view bindtap="bindViewTap" class="userinfo">
+  <view class="logo-container">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="logo">Yux</text>
   </view>
   <view class="usermotto">
-    <navigator url="../list/list" hover-class="navigator-hover">
+    <navigator url="../list/list" open-type="switchTab" hover-class="navigator-hover">
       <view>
-      <text class="logo">Yux</text>
+        <text class="nickname">{{userInfo.nickName}}</text>
         <text>欢迎来到语巷</text>
       </view>
     </navigator>

@@ -1,0 +1,56 @@
+
+<!--index.wxml-->
+<view class="page-view">
+  <view class="user-info">
+    <image class="info-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="info-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="user-setting">
+    <view class="setting-main">
+      <view class="left-icon">
+        <text class="fa fa-paper-plane-o"></text>
+        <text class="center-content">我的信息</text>
+      </view>
+      <text class="right-icon fa fa-angle-right"></text>
+    </view>
+    <view class="setting-list">
+      <view>
+        <text class="fa fa-file-o"></text>
+        <text class="content">我的文章</text>
+      </view>
+      <view>
+        <text class="fa fa-twitch"></text>
+        <text class="content">我的评论</text>
+      </view>
+      <view>
+        <text class="fa fa-heart-o"></text>
+        <text class="content">我喜欢的</text>
+      </view>
+    </view>
+    <view class="user-setting second">
+      <view class="setting-main">
+        <view class="left-icon">
+          <text class="fa fa-lock"></text>
+          <text class="center-content">安全设置</text>
+        </view>
+        <text class="right-icon fa fa-angle-right"></text>
+      </view>
+      <view class="setting-main">
+        <view class="left-icon">
+          <text class="fa fa-clone"></text>
+          <text class="center-content">清除缓存</text>
+        </view>
+        <text class="right-icon fa fa-angle-right"></text>
+      </view>
+      <view class="setting-main">
+        <view class="left-icon">
+          <text class="fa fa-cog"></text>
+          <text class="center-content">设置</text>
+        </view>
+        <text class="right-icon fa fa-angle-right"></text>
+      </view>
+     
+    </view>
+     <button plain="true" size="default" hover-class="button-hover">注销登陆</button>
+  </view>
+</view>

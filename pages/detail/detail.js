@@ -1,19 +1,19 @@
 import articleAPI from "../../utils/service/article.js";
 import WxParse from "../../plugins/wxParse/wxParse.js";
 Page({
-  data: { 
+  data: {
     info: {}
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
     let that = this;
-    
+
     articleAPI.getInfo(options._id)
       .then((res) => {
         if (res.data && res.data.isSuccess) {
           this.setData({ info: res.data.obj });
           let content = res.data.obj.content;
-          content = content.replace(/<img src=["]/g, '<img src="http://www.moguiweb.com.cn');
+          content = content.replace(/<img src="\//g, '<img src="http://www.moguiweb.com.cn/');
           WxParse.wxParse('content', 'html', content, that, 5);
         } else {
           wx.showModal({
@@ -34,11 +34,11 @@ Page({
   },
   onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
-    
+
   },
   onShow: function () {
     // 生命周期函数--监听页面显示
-    
+
   },
   onHide: function () {
     // 生命周期函数--监听页面隐藏

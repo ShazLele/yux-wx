@@ -1,3 +1,5 @@
+@import "../../plugins/wangEditor/wangEditor.wxss";
+
 .view-main {
   padding: 0.5rem;
   font-size: 0.75rem;
@@ -14,7 +16,7 @@
 .article-title {
   font-size: 1rem;
   display: block;
-  padding-bottom:0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .article-author {
@@ -34,5 +36,4 @@
 }
 
 .article-content {
-    
 }

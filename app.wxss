@@ -1,0 +1,48 @@
+/**app.wxss**/
+@import "./plugins/Font-Awesome/fonts/Font.wxss";
+@import "./plugins/Font-Awesome/css/font-awesome.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.page-view {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.page-navbar {
+  height: 2rem;
+  width: 100%;
+  background: rgba(0, 150, 136, 0.9);
+  position: fixed;
+  bottom: 0;
+  transition: bottom 0.5s;
+}
+
+.page-navbar.hidden {
+  bottom: -2rem;
+}
+
+.page-navbar .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.navbar>view {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  line-height: 2rem;
+}

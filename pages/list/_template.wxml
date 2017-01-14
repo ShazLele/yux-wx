@@ -1,0 +1,17 @@
+<template name="articleItem">
+  
+    <view id='abc' data-url="../detail/detail?_id={{_id}}" bindtap="goDetail" class="list-article">
+      <view class="article-content">
+        <text class="title">{{title}}</text>
+        <view class="desc">{{desc}}</view>
+        <view class="info">
+          <text>{{user.nickname}}</text>
+          <text>评论:{{comments&&comments.length||0}}</text>
+          <text>阅读:{{reading||0}}</text>
+        </view>
+      </view>
+      <view class="article-img" style="background-image:url('http://www.moguiweb.com.cn{{wallpic}}')">
+      </view>
+    </view>
+   
+</template>

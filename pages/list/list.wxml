@@ -1,0 +1,17 @@
+<import src="_template.wxml" />
+<view class="page-view" bindtouchmove="mytouchmove" bindtouchstart="mytouchstart">
+  <view class="view-list view-page">
+    <block wx:if="{{list&&list.length>0}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item">
+      <template is="articleItem" data="{{...item}}" />
+    </block>
+    <view class="list-loadtxt" wx:if="{{(!list||list.length<=0)}}">
+      <text>列表数据为空</text>
+    </view>
+    <view class="list-loadtxt" wx:if="{{isBottom}}">
+      已加载到最低端
+    </view>
+  </view>
+  <view class="page-navbar {{hideNav&&'hidden'}}">
+    <include src="../layout/navbar.wxml" />
+  </view>
+</view>

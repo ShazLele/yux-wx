@@ -1,0 +1,14 @@
+<import src="../../plugins/wxParse/wxParse.wxml" />
+<view class="view-main">
+  <text class="article-title">{{info.title}}</text>
+  <view class="article-author">
+    <text>{{info.user.nickname}}</text>
+    <text>{{info.addtime}}</text>
+  </view>
+  <view class="article-desc">
+    {{info.desc}}
+  </view>
+  <view class="article-content">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+  </view>
+</view>

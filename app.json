@@ -4,9 +4,11 @@
     "pages/list/list",
     "pages/logs/logs",
     "pages/detail/detail",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/user/info"
   ],
   "window": {
+    "backgroundColor": "#eee",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "语巷",
@@ -17,26 +19,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"./resource/images/home.png",
-        "selectedIconPath": "./resource/images/home-active.png"
+        "iconPath": "resource/images/home.png",
+        "selectedIconPath": "resource/images/home-active.png"
       },
       {
         "pagePath": "pages/list/list",
         "text": "文章",
-        "iconPath":"./resource/images/list.png",
-        "selectedIconPath":"./resource/images/list-active.png"
+        "iconPath": "resource/images/list.png",
+        "selectedIconPath": "resource/images/list-active.png"
       },
       {
         "pagePath": "pages/user/index",
         "text": "我的",
-          "iconPath":"./resource/images/user.png",
-        "selectedIconPath": "./resource/images/user-active.png"
+        "iconPath": "resource/images/user.png",
+        "selectedIconPath": "resource/images/user-active.png"
       }
     ],
     "position": "bottom",
     "backgroundColor": "#fff",
     "color": "#2c2c2c",
-   "selectedColor": "#009688"
+    "selectedColor": "#009688"
   },
   "networkTimeout": {
     "request": 10000,

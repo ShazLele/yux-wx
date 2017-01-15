@@ -1,4 +1,4 @@
-const demon = 'http://www.moguiweb.com.cn';
+const demon = 'https://www.moguiweb.com.cn';
 
 const base_article_api = demon + '/api/article';
 

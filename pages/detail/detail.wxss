@@ -1,37 +1,37 @@
 @import "../../plugins/wangEditor/wangEditor.wxss";
 
 .view-main {
-  padding: 0.5rem;
-  font-size: 0.75rem;
+  padding: 20rpx;
+  font-size: 30rpx;
   line-height: 1.5;
   word-break: break-all;
   text-align: justify;
 }
 
 .view-main>view {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
 }
 
 .article-title {
-  font-size: 1rem;
+  font-size: 40rpx;
   display: block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 20rpx;
 }
 
 .article-author {
-  font-size: 0.75rem;
+  font-size: 30rpx;
   color: #aaa;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2rpx solid #ddd;
 }
 
 .article-author text {
   display: inline-block;
-  padding-right: 0.5rem;
+  padding-right: 20rpx;
 }
 
 .article-desc {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2rpx solid #ddd;
   color: #333;
 }
 

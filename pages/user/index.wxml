@@ -6,7 +6,7 @@
     <text class="info-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="user-setting">
-    <view class="setting-main">
+    <view class="setting-main" bindtap="toInfo">
       <view class="left-icon">
         <text class="fa fa-paper-plane-o"></text>
         <text class="center-content">我的信息</text>
@@ -49,8 +49,7 @@
         </view>
         <text class="right-icon fa fa-angle-right"></text>
       </view>
-     
     </view>
-     <button plain="true" size="default" hover-class="button-hover">注销登陆</button>
+    <button plain="true" size="default" hover-class="button-hover">注销登陆</button>
   </view>
 </view>

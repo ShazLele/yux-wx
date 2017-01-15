@@ -8,9 +8,7 @@ Page({
   },
 
   onLoad: function () {
-    wx.switchTab({
-      url: '/pages/user/index'
-    })
+ 
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {

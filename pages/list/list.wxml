@@ -10,8 +10,5 @@
     <view class="list-loadtxt" wx:if="{{isBottom}}">
       已加载到最低端
     </view>
-  </view>
-  <!--<view class="page-navbar {{hideNav&&'hidden'}}">
-    <include src="../layout/navbar.wxml" />
-  </view>-->
+  </view> 
 </view>

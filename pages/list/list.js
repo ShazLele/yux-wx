@@ -6,12 +6,7 @@ Page({
     pageSize: 10,
     category: 0,
     isBottom: false,
-    list: [],
-    hideNav: false,
-    touch: {
-      x: 0,
-      y: 0
-    }
+    list: []  
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
@@ -111,21 +106,5 @@ Page({
     wx.navigateTo({
       url: event.currentTarget.dataset.url
     })
-  },
-  mytouchstart: function (event) {
-    this.setData({ 'touch.y': event.touches[0].clientY });
-  },
-  mytouchmove: function (event) {
-
-    let oldY = this.data.touch.y;
-    let currentY = event.touches[0].clientY;
-    
-    if (currentY - oldY > 10) {
-      this.setData({ hideNav: false });
-    }
-
-    if (oldY - currentY > 10) {
-      this.setData({ hideNav: true });
-    }
   }
 })

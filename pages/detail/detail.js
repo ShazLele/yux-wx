@@ -14,6 +14,7 @@ Page({
           this.setData({ info: res.data.obj });
           let content = res.data.obj.content;
           content = content.replace(/<img src="\//g, '<img src="http://www.moguiweb.com.cn/');
+          console.log(content);
           WxParse.wxParse('content', 'html', content, that, 5);
         } else {
           wx.showModal({

@@ -2,7 +2,7 @@
 
 .view-main {
   padding: 20rpx;
-  font-size: 30rpx;
+  font-size: 32rpx;
   line-height: 1.5;
   word-break: break-all;
   text-align: justify;
@@ -20,7 +20,7 @@
 }
 
 .article-author {
-  font-size: 30rpx;
+  font-size: 32rpx;
   color: #aaa;
   border-bottom: 2rpx solid #ddd;
 }

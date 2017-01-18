@@ -1,11 +1,7 @@
 
 .view-main {
   padding: 20rpx;
-<<<<<<< HEAD
   font-size: 36rpx;
-=======
-  font-size: 32rpx;
->>>>>>> a7ae7104cb86bb58a31092b94299acccf6243eae
   line-height: 1.5;
   word-break: break-all;
   text-align: justify;

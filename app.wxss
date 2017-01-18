@@ -1,6 +1,7 @@
 /**app.wxss**/
 @import "./plugins/Font-Awesome/fonts/Font.wxss";
 @import "./plugins/Font-Awesome/css/font-awesome.wxss";
+@import "./common.wxss";
 
 .container {
   height: 100%;
@@ -10,7 +11,7 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-  background:transparent;
+  background: transparent;
 }
 
 .page-view {
@@ -19,6 +20,8 @@
   flex-direction: column;
   align-items: stretch;
   box-sizing: border-box;
+  font-family: 'Microsoft YaHei' 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #37474f;
 }
 
 .page-navbar {

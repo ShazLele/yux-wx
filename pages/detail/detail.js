@@ -1,5 +1,6 @@
-import articleAPI from "../../utils/service/article.js";
+import articleService from "../../utils/service/article.js";
 import WxParse from "../../plugins/wxParse/wxParse.js";
+import util from "../../utils/util.js";
 Page({
   data: {
     info: {}
@@ -8,13 +9,12 @@ Page({
     // 生命周期函数--监听页面加载
     let that = this;
 
-    articleAPI.getInfo(options._id)
+    articleService.getInfo(options._id)
       .then((res) => {
         if (res.data && res.data.isSuccess) {
           this.setData({ info: res.data.obj });
           let content = res.data.obj.content;
-          content = content.replace(/<img src="\//g, '<img src="http://www.moguiweb.com.cn/');
-          console.log(content);
+          content = util.formatPreHTML(content);
           WxParse.wxParse('content', 'html', content, that, 5);
         } else {
           wx.showModal({
@@ -31,22 +31,6 @@ Page({
         })
       })
 
-
-  },
-  onReady: function () {
-    // 生命周期函数--监听页面初次渲染完成
-
-  },
-  onShow: function () {
-    // 生命周期函数--监听页面显示
-
-  },
-  onHide: function () {
-    // 生命周期函数--监听页面隐藏
-
-  },
-  onUnload: function () {
-    // 生命周期函数--监听页面卸载
 
   },
 

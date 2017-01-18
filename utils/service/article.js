@@ -1,16 +1,16 @@
 
 import apis from "./api.js";
 
-class ArticleAPI {
+class ArticleService {
     constructor() {
-        this.article_api = apis.article_api;
+        this.aritcleAPI = apis.aritcleAPI;
     }
     //分页数据
     getPage(category, index, size, complete) {
 
         let promise = new Promise((resolve, reject) => {
             wx.request({
-                url: `${this.article_api.page}/${category || 0}/${index || 0}/${size || 0}`,
+                url: `${this.aritcleAPI.page}/${category || 0}/${index || 0}/${size || 0}`,
                 method: 'GET',
                 success: function (res) {
                     // success 
@@ -32,7 +32,7 @@ class ArticleAPI {
     getInfo(_id, complete) {
         let promise = new Promise((resolve, reject) => {
             wx.request({
-                url: `${this.article_api.info}/${_id}`,
+                url: `${this.aritcleAPI.info}/${_id}`,
                 method: 'GET',
                 success: function (res) {
                     // success
@@ -53,5 +53,5 @@ class ArticleAPI {
 
 }
 
-export default new ArticleAPI();
+export default new ArticleService();
 

@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/list/list",
-    "pages/logs/logs",
+    "pages/index/index", 
+    "pages/list/web",
     "pages/detail/detail",
     "pages/user/index",
     "pages/user/info"
@@ -23,7 +22,7 @@
         "selectedIconPath": "resource/images/home-active.png"
       },
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/list/web",
         "text": "文章",
         "iconPath": "resource/images/list.png",
         "selectedIconPath": "resource/images/list-active.png"

@@ -1,0 +1,11 @@
+<view class="navbar">
+  <view>
+    <text class="fa fa-home"></text>
+    首页</view>
+  <view>
+    <text class="fa fa-list"></text>
+    文章</view>
+  <view>
+    <text class="fa fa-user"></text>
+    我的</view>
+</view>

@@ -6,7 +6,7 @@
     <text class="logo">Yux</text>
   </view>
   <view class="usermotto">
-    <navigator url="../list/list" open-type="switchTab" hover-class="navigator-hover">
+    <navigator url="../list/web" open-type="switchTab" hover-class="navigator-hover">
       <view>
         <text class="nickname">{{userInfo.nickName}}</text>
         <text>欢迎来到语巷</text>

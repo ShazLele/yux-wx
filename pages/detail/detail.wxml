@@ -1,5 +1,5 @@
 <import src="../../plugins/wxParse/wxParse.wxml" />
-<view class="view-main">
+<view class="view-main page-view">
   <text class="article-title">{{info.title}}</text>
   <view class="article-author">
     <text>{{info.user.nickname}}</text>

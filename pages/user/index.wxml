@@ -3,7 +3,7 @@
 <view class="page-view">
   <view class="user-info">
     <image class="info-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="info-nickname">{{userInfo.nickName}}</text>
+    <text class="info-nickname">{{userInfo.nickName||userInfo.nickname}}</text>
   </view>
   <view class="user-setting">
     <view class="setting-main" bindtap="toInfo">

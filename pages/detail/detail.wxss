@@ -19,7 +19,7 @@
 }
 
 .article-author {
-  font-size: 32rpx;
+  font-size: 30rpx;
   color: #aaa;
   border-bottom: 2rpx solid #ddd;
 }

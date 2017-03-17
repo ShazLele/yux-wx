@@ -8,7 +8,7 @@
   <view class="usermotto">
     <navigator url="../list/web" open-type="switchTab" hover-class="navigator-hover">
       <view>
-        <text class="nickname">{{userInfo.nickName}}</text>
+        <text class="nickname">{{userInfo.nickName||userInfo.nickname}}</text>
         <text>欢迎来到语巷</text>
       </view>
     </navigator>

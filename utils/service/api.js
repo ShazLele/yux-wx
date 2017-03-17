@@ -8,6 +8,7 @@ const aritcleAPI = {
 };
 const userAPI = {
     login: base_user_api + '/login', 
+    wxLogin:base_user_api+'/wx/login',
     register: base_user_api + '/register',
     logout: base_user_api + '/logout'
 };

@@ -1,26 +1,42 @@
 //app.js
+import userService from "./utils/service/user.js";
 App({
   onLaunch: function () {
-    //调用API从本地缓存中获取数据
-   
+
   },
-  getUserInfo: function (cb) {
-    var that = this
-    if (this.globalData.userInfo) {
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    } else {
-      //调用登录接口
+  getUserInfo: function () {
+    return this.login();
+  },
+  login: function () {
+    var that = this;
+    let promise = new Promise((resolve, reject) => {
+      //微信联登
+      if (this.globalData.userInfo) {
+        return resolve(this.globalData.userInfo);
+      }
       wx.login({
-        success: function () {
+        success: (res) => {
+          let code = res.code;
+          if (!code)
+            return reject('code验证失败');
           wx.getUserInfo({
             success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
+              that.globalData.userInfo = res.userInfo;
+              userService.loginCode(code, res.userInfo)
+                .then((data) => {
+
+                  that.globalData.userInfo = data.data.obj;
+                });
+              resolve(res.userInfo);
+            },
+            fail: function (err) {
+              reject(err);
             }
           })
         }
       })
-    }
+    })
+    return promise;
   },
   globalData: {
     userInfo: null

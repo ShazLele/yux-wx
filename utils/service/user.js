@@ -31,15 +31,17 @@ class userAPI {
     })
     return promise;
   }
-  
-  loginCode(code, complete) {
+
+  loginCode(code, user, complete) {
+
     let promise = new Promise((resolve, reject) => {
       wx.request({
-        url: api.userAPI.login,
-        data: {
-          code: code
-        },
+        url: api.userAPI.wxLogin,
         method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        data: {
+          code: code,
+          user: user
+        },
         // header: {}, // 设置请求的 header
         success: function (res) {
           // success 
